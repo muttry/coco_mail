@@ -3,7 +3,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from .models import User
 # Create your views here.
-class ResigerUsernameCountApiview(APIView):
+class RegisterUsernameCountAPIView(APIView):
     """
     获取用户名的个数
     GET:  /users/usernames/(?P<username>\w{5,20})/count/
@@ -15,6 +15,7 @@ class ResigerUsernameCountApiview(APIView):
             "username":username,
         }
         return Response(context)
+
 
 
 
